@@ -12,7 +12,13 @@ import librosa
 import webbrowser
 
 from text import text_to_sequence, _clean_text
-device = "cuda:0" if torch.cuda.is_available() else "cpu"
+if torch.cuda.is_available():
+    device = "cuda:0"
+elif torch.backends.mps.is_built():
+    device = "mps:0"
+else:
+    device = "cpu"
+
 import logging
 logging.getLogger("PIL").setLevel(logging.WARNING)
 logging.getLogger("urllib3").setLevel(logging.WARNING)
