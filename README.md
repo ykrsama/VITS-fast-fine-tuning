@@ -1,7 +1,7 @@
-# Fork for internal usage (macOS)
+# This is a fork for internal usage (macOS)
 
 ```
-# Prepare
+# Prepare on server
 git clone --branch xuliang-dev git@github.com:ykrsama/VITS-fast-fine-tuning.git 
 cd VITS-fast-fine-tuning
 cp /Users/Shared/Models/VITS/Yunan/* . # This will copy G_latest.pth, finetune_speaker.json, moegoe_config.json

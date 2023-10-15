@@ -1,0 +1,16 @@
+*.pth
+*.json
+__pycache__
+custom_character_voice
+denoised_audio
+monotonic_align
+raw_audio
+video_data
+sampled_audio4ft
+segmented_character_voice
+separated
+*.zip
+*.zip.1
+text
+*.txt
+!requirements.text
