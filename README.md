@@ -1,3 +1,22 @@
+# Fork for internal usage (macOS)
+
+```
+# Prepare
+git clone --branch xuliang-dev git@github.com:ykrsama/VITS-fast-fine-tuning.git 
+cd VITS-fast-fine-tuning
+cp /Users/Shared/Models/VITS/Yunan/* . # This will copy G_latest.pth, finetune_speaker.json, moegoe_config.json
+
+# Run on server
+conda activate VITS
+python VC_inference.py --model_dir G_latest.pth
+
+# On local terminal:
+ssh -N -L 7861:localhost:7861 m2u
+open http://localhost:7861
+```
+
+
+# Original readme
 [中文文档请点击这里](https://github.com/Plachtaa/VITS-fast-fine-tuning/blob/main/README_ZH.md)
 # VITS Fast Fine-tuning
 This repo will guide you to add your own character voices, or even your own voice, into existing VITS TTS model

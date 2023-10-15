@@ -122,8 +122,8 @@ if __name__ == "__main__":
                                           value="こんにちわ。", elem_id=f"tts-input")
                     # select character
                     char_dropdown = gr.Dropdown(choices=speakers, value=speakers[0], label='character')
-                    language_dropdown = gr.Dropdown(choices=lang, value=lang[0], label='language')
-                    duration_slider = gr.Slider(minimum=0.1, maximum=5, value=1, step=0.1,
+                    language_dropdown = gr.Dropdown(choices=lang, value=lang[1], label='language')
+                    duration_slider = gr.Slider(minimum=0.1, maximum=5, value=2, step=0.1,
                                                 label='速度 Speed')
                 with gr.Column():
                     text_output = gr.Textbox(label="Message")
